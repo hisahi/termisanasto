@@ -29,13 +29,13 @@ laajempaan käyttöön.
 
 # Lyhenteet
 
-# ''(adj.)'' = adjective / adjektiivi
-* ''(n.)'' = noun ~ (subst.)
-* ''(puh.)'' = puhekielessä
-* ''(slg.)'' = slangi
-* ''(subst.)'' = substantiivi ~ (n.)
-* ''(v.)'' = verb ~ (verb.)
-* ''(verb.)'' = verbi ~ (v.)
+* _(adj.)_ = adjective / adjektiivi
+* _(n.)_ = noun ~ (subst.)
+* _(puh.)_ = puhekielessä
+* _(slg.)_ = slangi
+* _(subst.)_ = substantiivi ~ (n.)
+* _(v.)_ = verb ~ (verb.)
+* _(verb.)_ = verbi ~ (v.)
 
 
 
