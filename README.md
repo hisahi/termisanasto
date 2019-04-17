@@ -18,7 +18,12 @@ sanastot voidaan muuntaa niiden natiivista Markdown-
 yhteensopivasta muodosta vaikka HTML-muotoon.
 
 ## Sanastojen muodosta
-Lisää löytyy `SANASTOT.md`-tiedostosta.
+Lisää löytyy [MUOTOILU.md]
+(https://github.com/hisahi/termisanasto/blob/master/MUOTOILU.md)-tiedostosta.
+
+# Sanastot
+* [Git, GitHub]
+(https://github.com/hisahi/termisanasto/blob/master/sanastot/git_github.md)
 
 # English
 This repository is used to store Finnish-English glossaries,
