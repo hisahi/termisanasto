@@ -41,6 +41,7 @@ _(v.)_ to clone
 
 _(n.)_ commit
 * _(subst.)_ **solmittu muutos**
+* _(subst.)_ **sitoutus**
 * _(subst.)_ pysyvä muutos
 * _(subst.)_ **solmu**
 * _(subst.)_ **solminta**
@@ -52,6 +53,7 @@ _(n.)_ commit
 
 _(v.)_ to commit
 * _(verb.)_ **solmia**
+* _(verb.)_ **sitouttaa**
 > The action of storing a new snapshot of the project’s state in the Git
 > history, by creating a new commit representing the current state of the
 > index and advancing HEAD to point at the new commit.
