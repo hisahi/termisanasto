@@ -8,7 +8,10 @@ tulevan laajempaan käyttöön, sillä mielestäni nykyistä
 suomenkielistä termiä ei joko ole tai se on hankala.
 
 ## Miksi GitHubissa?
-GitHubin työkalut sallivat helposti yhteistyön termien
+GitHubin työkalut (kuten 
+[seikat](https://github.com/hisahi/termisanasto/issues) 
+ja [vetopyynnöt](https://github.com/hisahi/termisanasto/pulls)) 
+sallivat helposti yhteistyön termien
 keksimisessä ja sanastojen kokoamisessa. Tämän lisäksi
 tähän tietolähteeseen tulee koodi, jolla kyseiset
 sanastot voidaan muuntaa niiden natiivista Markdown-
