@@ -40,6 +40,9 @@ _(v.)_ to clone
 ---
 
 _(n.)_ commit
+* _(subst.)_ **solmittu muutos**
+* _(subst.)_ pysyvä muutos
+* _(subst.)_ **solmu**
 * _(subst.)_ **solminta**
 > A single point in the Git history; the entire history of a project is
 > represented as a set of interrelated commits.
