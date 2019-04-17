@@ -21,7 +21,10 @@ _(n.)_ backreference
 ---
 
 _(n.)_ capturing group
-* _(subst.)_ **poimintaryhmä**, **poimiva ryhmä**
+* _(subst.)_ **poimiva ryhmä**
+* _(subst.)_ **poimintaryhmä**
+* _(subst.)_ tallennusryhmä
+* _(subst.)_ tallentava ryhmä
 > A group that stores its matched value for use in a 
 > substitution.
 - Katso myös: `non-capturing group`
@@ -44,6 +47,7 @@ _(n.)_ complemented character class
 
 _(v.)_ to escape
 * _(verb.)_ **peitellä**
+* _(verb.)_ eskapoida
 > To transform text in such a way that its
 > interpretation even in systems where some
 > characters have special meanings is still
@@ -133,6 +137,7 @@ _(n.)_ metacharacter
 
 _(n.)_ non-capturing group
 * _(subst.)_ **poimimaton ryhmä**
+* _(subst.)_ tallentamaton ryhmä
 > A group or grouping that does not capture its match.
 - Katso myös: `capturing group`
 

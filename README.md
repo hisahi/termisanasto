@@ -26,6 +26,8 @@ Lisää löytyy [MUOTOILU.md](
     https://github.com/hisahi/termisanasto/blob/master/sanastot/git_github.md)
 * [Säännölliset lausekkeet, RegEx](
     https://github.com/hisahi/termisanasto/blob/master/sanastot/regex.md)
+* [Kryptografia](
+    https://github.com/hisahi/termisanasto/blob/master/sanastot/crypto.md)
 
 # English
 This repository is used to store Finnish-English glossaries,
