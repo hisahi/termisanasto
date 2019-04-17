@@ -25,6 +25,14 @@ _(n.)_ branch
 
 ---
 
+_(n.)_ checkout
+* _(subst.)_ haaranvaihto
+> The action of updating all or part of the working tree with a tree
+> object or blob from the object database, and updating the index
+> and HEAD if the whole working tree has been pointed at a new branch.
+
+---
+
 _(v.)_ to clone
 * _(verb.)_ kopioida, kahdentaa
 > To get oneself a local copy of a repository.
@@ -56,11 +64,26 @@ _(n.)_ fast-forward
 
 ---
 
+_(v.)_ to fetch
+* _(verb.)_ hakea
+> Fetching a branch means to get the branch’s head ref from a remote
+> repository, to find out which objects are missing from the local
+> object database, and to get them, too.
+
+---
+
 _(n.)_ fork
 * _(subst.)_ haarauma
 > GitHub: A fork is a copy of a repository. Forking a repository allows you
 > to freely experiment with changes without affecting the original project.
 - Katso myös: `branch`
+
+---
+
+_(n.)_ index
+> A collection of files with stat information, whose contents are stored 
+> as objects. The index is a stored version of your working tree.
+* _(subst.)_ indeksi
 
 ---
 
@@ -127,6 +150,11 @@ _(n.)_ rebase
 
 ---
 
+_(n.)_ ref (reference)
+* _(subst.)_ viittaus
+
+---
+
 _(v.)_ to rewind
 * _(verb.)_ kelata taaksepäin
 > To throw away part of the development, i.e. to assign the head
@@ -136,6 +164,13 @@ _(v.)_ to rewind
 
 _(n.)_ staging area
 * _(subst.)_ valmistelualue
+
+---
+
+_(n.)_ tag
+* _(subst.)_ **lippu**
+> A ref under `refs/tags/` namespace that points to an object of an
+> arbitrary type (typically a tag points to either a tag or a commit object).
 
 ---
 
