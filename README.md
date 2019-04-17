@@ -24,7 +24,8 @@ Lisää löytyy [MUOTOILU.md](
 # Sanastot
 * [Git, GitHub](
     https://github.com/hisahi/termisanasto/blob/master/sanastot/git_github.md)
-* Säännölliset lausekkeet, RegEx (tulossa pian)
+* [Säännölliset lausekkeet, RegEx](
+    https://github.com/hisahi/termisanasto/blob/master/sanastot/regex.md)
 
 # English
 This repository is used to store Finnish-English glossaries,

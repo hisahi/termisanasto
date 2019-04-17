@@ -11,7 +11,7 @@ https://www.linux.fi/wiki/Git
 Itse keksimäni sanat ovat **lihavoitu**.
 The terms I coined are in **bold**.
 
-Sanasto on vielä keskeneräinen.
+Sanasto on vielä keskeneräinen (ainahan se!).
 
 # Sanat
 
