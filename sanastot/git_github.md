@@ -16,8 +16,8 @@ Sanasto on vielä keskeneräinen.
 # Sanat
 
 _(n.)_ branch
-> An active line of development.
 * _(subst.)_ haara
+> An active line of development.
 >> Kehityksen aktiivinen osa, esim. _master_ (päähaara) tai jokaista 
 >> ominaisuutta varten tehtävä uusi oksa, jossa kehitystyö tehdään ja lopuksi
 >> oksa yhdistetään pääoksaan.
@@ -25,100 +25,100 @@ _(n.)_ branch
 
 ---
 
-_(v.)_ to clonbe
-> To get oneself a local copy of a repository.
+_(v.)_ to clone
 * _(verb.)_ kopioida, kahdentaa
+> To get oneself a local copy of a repository.
 
 ---
 
 _(n.)_ commit
-> A single point in the Git history; the entire history of a project is
-> represented as a set of interrelated commits
 * _(subst.)_ **solminta**
+> A single point in the Git history; the entire history of a project is
+> represented as a set of interrelated commits.
 >> Pysyvä muutos.
 
 ---
 
 _(v.)_ to commit
+* _(verb.)_ **solmia**
 > The action of storing a new snapshot of the project’s state in the Git
 > history, by creating a new commit representing the current state of the
 > index and advancing HEAD to point at the new commit.
-* _(verb.)_ **solmia**
 >> Tehdä pysyvä muutos.
 
 ----
 
 _(n.)_ fast-forward
+* _(subst.)_ pikakelaus
 > A fast-forward is a special type of merge where you have a revision
 > and you are "merging" another branch's changes that happen to be a
 > descendant of what you have.
-* _(subst.)_ pikakelaus
 
 ---
 
 _(n.)_ fork
+* _(subst.)_ haarauma
 > GitHub: A fork is a copy of a repository. Forking a repository allows you
 > to freely experiment with changes without affecting the original project.
-* _(subst.)_ haarauma
 - Katso myös: `branch`
 
 ---
 
 _(n.)_ issue
+* _(subst.)_ **seikka**
 > On GitHub, a system for tracking ideas, enhancements, tasks,
 > or bugs for work.
-* _(subst.)_ **seikka**
 
 ---
 
 _(v.)_ to merge
+* _(verb.)_ yhdistää
 > To bring the contents of another branch (possibly from an external
 > repository) into the current branch. 
->* _(verb.)_ yhdistää
-> Yhdistää jokin ulkoinen haara nykyiseen haaraan.
+>> Yhdistää jokin ulkoinen haara nykyiseen haaraan.
 
 ---
 
 _(n.)_ object
-> The unit of storage in Git.
 * _(subst.)_ olio
+> The unit of storage in Git.
 
 ---
 
 _(n.)_ origin
-> The default upstream repository.
 * _(subst.)_ alkuperä
+> The default upstream repository.
 
 ---
 
 _(v.)_ to pull
-> Pulling a branch means to fetch it and merge it.
 * _(verb.)_ vetää
+> Pulling a branch means to fetch it and merge it.
 
 ---
 
 _(v.)_ to push
+* _(verb.)_ työntää
 > Pushing a branch means to get the branch’s head ref from a remote repository,
 > find out if it is an ancestor to the branch’s local head ref, and in that
 > case, putting all objects, which are reachable from the local head ref,
 > and which are missing from the remote repository, into the remote object
 > database, and updating the remote head ref. 
-* _(verb.)_ työntää
 
 ---
 
 _(n.)_ pull request
+* _(subst.)_ vetopyyntö, **vetoehdotus**
 > On GitHub, a system for recommending changes to a project,
 > requesting the project maintainer or any person with such
 > permissions to pull a given branch into the repository.
-* _(subst.)_ vetopyyntö, **vetoehdotus**
 
 ---
 
 _(n.)_ rebase
+* _(verb.)_ **sulauttaa**
 > To reapply a series of changes from a branch to a different base,
 > and reset the head of that branch to the result.
-* _(verb.)_ **sulauttaa**
 >> Haaran sulauttaminen esimerkiksi päähaaraan vaihtaa sulautettavan
 >> haaran pohjaksi taas päähaaran. Tämän toteuttaakseen kaikki
 >> haaran päähaarasta eroavat muutokset kelataan takaisin ja tehdään
@@ -128,9 +128,9 @@ _(n.)_ rebase
 ---
 
 _(v.)_ to rewind
+* _(verb.)_ kelata taaksepäin
 > To throw away part of the development, i.e. to assign the head
 > to an earlier revision.
-* _(verb.)_ kelata taaksepäin
 
 ---
 
@@ -145,8 +145,8 @@ _(n.)_ upstream
 ---
 
 _(n.)_ working tree
+* _(subst.)_ työpuu
 > The tree of actual checked out files. The working tree normally
 > contains the contents of the HEAD commit’s tree, plus any local
 > changes that you have made but not yet committed.
-* _(subst.)_ työpuu
 

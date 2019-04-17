@@ -5,10 +5,10 @@ joko luotavan sanastoasiakirjan alkuun tai loppuun. Pääasiallinen
 sisältö on Sanat-kappaleessa, jossa jokainen sana on seuraavassa muodossa:
 
 1. Englanninkielinen sana, yhdellä rivillä
-2. (Mahdollisesti) englanninkielinen selitys käyttämällä
-   Markdownin lainaussyntaksia.
-3. Suomenkieliset käännökset; jokaisen rivin alkuun
+2. Suomenkieliset käännökset; jokaisen rivin alkuun
    tulee `*`.
+3. (Mahdollisesti) englanninkielinen selitys käyttämällä
+   Markdownin lainaussyntaksia.
 4. (Mahdollisesti) suomenkielinen selitys, samaan tapaan
    kuin englanninkielinenkin, mutta rivien alussa `>>` eikä `>`.
 5. Mahdollinen "katso myös" -osio, yksi kohta per rivi,
@@ -20,10 +20,10 @@ Esimerkiksi:
 
 ```
 _(v.)_ to commit
+* _(verb.)_ **solmia**
 > The action of storing a new snapshot of the project’s state in the Git
 > history, by creating a new commit representing the current state of the
 > index and advancing HEAD to point at the new commit.
-* _(verb.)_ **solmia**
 >> Tehdä pysyvä muutos.
 * Katso myös: `commit`
 
