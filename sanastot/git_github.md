@@ -45,6 +45,7 @@ _(n.)_ commit
 * _(subst.)_ pysyvä muutos
 * _(subst.)_ **solmu**
 * _(subst.)_ **solminta**
+* _(subst.)_ **varastointi**
 > A single point in the Git history; the entire history of a project is
 > represented as a set of interrelated commits.
 >> Pysyvä muutos.
@@ -54,6 +55,7 @@ _(n.)_ commit
 _(v.)_ to commit
 * _(verb.)_ **solmia**
 * _(verb.)_ **sitouttaa**
+* _(verb.)_ **varastoida**
 > The action of storing a new snapshot of the project’s state in the Git
 > history, by creating a new commit representing the current state of the
 > index and advancing HEAD to point at the new commit.
@@ -160,6 +162,15 @@ _(n.)_ ref (reference)
 
 ---
 
+_(n.)_ repository
+* _(subst.)_ tietolähde
+* _(subst.)_ tietovarasto
+* _(subst.)_ tietosäilö
+* _(subst.)_ tietosäiliö
+* _(subst. slg.)_ repo
+
+---
+
 _(v.)_ to rewind
 * _(verb.)_ kelata taaksepäin
 > To throw away part of the development, i.e. to assign the head
@@ -174,6 +185,7 @@ _(n.)_ staging area
 
 _(n.)_ tag
 * _(subst.)_ **lippu**
+* _(subst.)_ merkintä
 > A ref under `refs/tags/` namespace that points to an object of an
 > arbitrary type (typically a tag points to either a tag or a commit object).
 
@@ -181,6 +193,11 @@ _(n.)_ tag
 
 _(n.)_ upstream
 * _(subst.)_ ylätaso, **yläjuoksu**
+
+---
+
+_(n.)_ working directory
+* _(subst.)_ työhakemisto
 
 ---
 
