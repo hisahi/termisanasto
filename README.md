@@ -2,10 +2,10 @@
 Tämä tietolähde tulee sisältämään termisanastoja, 
 jotka olen koonnut muista lähteistä. Sanastot tulevat
 olemaan suomi-englanti-sanastoja ja sisältämään pääosin
-tietojenkäsittelytieteen ja ohjelmoinnin aiheisia termejä 
+tietojenkäsittelytieteen ja ohjelmoinnin aiheisia termejä.
 Tämän lisäksi olen myös itse keksinyt termejä, joiden toivoisin
-tulevan laajempaan käyttöön, sillä mielestäni nykyistä
-suomenkielistä termiä ei joko ole tai se on hankala.
+tulevan laajempaan käyttöön, sillä joko nykyistä
+suomenkielistä termiä ei ole tai se on mielestäni hankala.
 
 ## Miksi GitHubissa?
 GitHubin työkalut (kuten 
