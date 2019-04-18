@@ -1,3 +1,5 @@
+Säännöllisten lausekkeiden sanasto
+
 # Alku
 Itse keksimäni sanat ovat **lihavoitu**.
 The terms I coined are in **bold**.
@@ -45,7 +47,7 @@ _(n.)_ complemented character class
 
 ---
 
-_(v.)_ to escape
+_(v.)_ escape
 * _(verb.)_ **peitellä**
 * _(verb.)_ eskapoida
 > To transform text in such a way that its
@@ -98,7 +100,7 @@ _(n.)_ lookaround
 * _(subst.)_ **vilkaisu**
 > A collective term for lookaheads and lookbehinds, two types
 > of zero-length matches.
-** Yhteinen termi sekä etu- että takavilkaisuille.
+>> Yhteinen termi sekä etu- että takavilkaisuille.
 
 ---
 
@@ -121,7 +123,7 @@ _(n.)_ match
 
 ---
 
-_(v.)_ to match
+_(v.)_ match
 * _(verbi.)_ täsmätä
 > To find some text that corresponds to the given regular
 > expression.

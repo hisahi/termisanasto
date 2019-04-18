@@ -1,3 +1,5 @@
+Kryptografian sanasto
+
 # Alku
 Itse keksimäni sanat ovat **lihavoitu**.
 The terms I coined are in **bold**.

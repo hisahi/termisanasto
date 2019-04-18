@@ -1,10 +1,11 @@
 # Sanastojen muoto
-Sanastot ovat Markdown-yhteensopivassa muodossa. Jokaisen sanaston
+Sanastot ovat Markdown-yhteensopivassa muodossa. Niiden ensimmäinen rivi
+on aina sanaston nimi tai muu otsikko, joka on pakollinen. Jokaisen sanaston
 alussa voi olla Alku-kappale ja lopussa Loppu-kappale, jotka lisätään
 joko luotavan sanastoasiakirjan alkuun tai loppuun. Pääasiallinen 
 sisältö on Sanat-kappaleessa, jossa jokainen sana on seuraavassa muodossa:
 
-1. Englanninkielinen sana, yhdellä rivillä
+1. Englanninkielinen sana, yksi rivi termiä kohden (yleensä vain yksi)
 2. Suomenkieliset käännökset; jokaisen rivin alkuun
    tulee `*`.
 3. (Mahdollisesti) englanninkielinen selitys käyttämällä
@@ -12,20 +13,21 @@ sisältö on Sanat-kappaleessa, jossa jokainen sana on seuraavassa muodossa:
 4. (Mahdollisesti) suomenkielinen selitys, samaan tapaan
    kuin englanninkielinenkin, mutta rivien alussa `>>` eikä `>`.
 5. Mahdollinen "katso myös" -osio, yksi kohta per rivi,
-   ja rivien alkuun tulee `-`.
+   ja rivien alkuun tulee `-`. Jokainen rivi koetaan omaksi
+   rivikseen HTML-taulukossa.
 6. Jokaisen sanan väliin tulee `---`, joka on Markdownissa
    vaakasuuntainen viiva.
 
 Esimerkiksi:
 
 ```
-_(v.)_ to commit
-* _(verb.)_ **solmia**
-> The action of storing a new snapshot of the project’s state in the Git
-> history, by creating a new commit representing the current state of the
-> index and advancing HEAD to point at the new commit.
->> Tehdä pysyvä muutos.
-* Katso myös: `commit`
+_(v.)_ to merge
+* _(verb.)_ yhdistää
+> To bring the contents of another branch (possibly from an external
+> repository) into the current branch. 
+>> Yhdistää jokin ulkoinen haara nykyiseen haaraan.
+- Katso myös: `rebase`
+- Katso myös: `branch`
 
 ---
 ```

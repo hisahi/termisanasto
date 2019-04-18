@@ -1,12 +1,16 @@
+Git- ja GitHub-sanasto
+
 # Alku
 Englanninkieliset selitykset / English explanations:
-https://git-scm.com/docs/gitglossary
-https://help.github.com/en/articles/about-issues
-https://help.github.com/en/articles/about-pull-requests
+* [https://git-scm.com/docs/gitglossary](https://git-scm.com/docs/gitglossary)
+* [https://help.github.com/en/articles/about-issues](
+   https://help.github.com/en/articles/about-issues)
+* [https://help.github.com/en/articles/about-pull-requests](
+   https://help.github.com/en/articles/about-pull-requests)
 
-Jotain suomenkielistä sanastoa on haettu lähtei stä
-https://git-scm.com/book/fi/v1/
-https://www.linux.fi/wiki/Git
+Jotain suomenkielistä sanastoa on haettu lähteistä
+* [https://git-scm.com/book/fi/v1/](https://git-scm.com/book/fi/v1/)
+* [https://www.linux.fi/wiki/Git](https://www.linux.fi/wiki/Git)
 
 Itse keksimäni sanat ovat **lihavoitu**.
 The terms I coined are in **bold**.
@@ -33,8 +37,9 @@ _(n.)_ checkout
 
 ---
 
-_(v.)_ to clone
-* _(verb.)_ kopioida, kahdentaa
+_(v.)_ clone
+* _(verb.)_ kopioida
+* _(verb.)_ kahdentaa
 > To get oneself a local copy of a repository.
 
 ---
@@ -52,7 +57,7 @@ _(n.)_ commit
 
 ---
 
-_(v.)_ to commit
+_(v.)_ commit
 * _(verb.)_ **solmia**
 * _(verb.)_ **sitouttaa**
 * _(verb.)_ **varastoida**
@@ -61,7 +66,7 @@ _(v.)_ to commit
 > index and advancing HEAD to point at the new commit.
 >> Tehdä pysyvä muutos.
 
-----
+---
 
 _(n.)_ fast-forward
 * _(subst.)_ pikakelaus
@@ -71,7 +76,7 @@ _(n.)_ fast-forward
 
 ---
 
-_(v.)_ to fetch
+_(v.)_ fetch
 * _(verb.)_ hakea
 > Fetching a branch means to get the branch’s head ref from a remote
 > repository, to find out which objects are missing from the local
@@ -88,9 +93,9 @@ _(n.)_ fork
 ---
 
 _(n.)_ index
+* _(subst.)_ indeksi
 > A collection of files with stat information, whose contents are stored 
 > as objects. The index is a stored version of your working tree.
-* _(subst.)_ indeksi
 
 ---
 
@@ -101,11 +106,12 @@ _(n.)_ issue
 
 ---
 
-_(v.)_ to merge
+_(v.)_ merge
 * _(verb.)_ yhdistää
 > To bring the contents of another branch (possibly from an external
 > repository) into the current branch. 
 >> Yhdistää jokin ulkoinen haara nykyiseen haaraan.
+- Katso myös: `rebase`
 
 ---
 
@@ -121,13 +127,13 @@ _(n.)_ origin
 
 ---
 
-_(v.)_ to pull
+_(v.)_ pull
 * _(verb.)_ vetää
 > Pulling a branch means to fetch it and merge it.
 
 ---
 
-_(v.)_ to push
+_(v.)_ push
 * _(verb.)_ työntää
 > Pushing a branch means to get the branch’s head ref from a remote repository,
 > find out if it is an ancestor to the branch’s local head ref, and in that
@@ -138,7 +144,8 @@ _(v.)_ to push
 ---
 
 _(n.)_ pull request
-* _(subst.)_ vetopyyntö, **vetoehdotus**
+* _(subst.)_ vetopyyntö
+* _(subst.)_ **vetoehdotus**
 > On GitHub, a system for recommending changes to a project,
 > requesting the project maintainer or any person with such
 > permissions to pull a given branch into the repository.
@@ -154,6 +161,7 @@ _(n.)_ rebase
 >> haaran päähaarasta eroavat muutokset kelataan takaisin ja tehdään
 >> uudestaan päähaaran vastaavan tilan päälle, jonka jälkeen molemmat
 >> haarojen puussa ei ole enää varsinaisesti "haaraa".
+- Katso myös: `merge` 
 
 ---
 
@@ -171,7 +179,7 @@ _(n.)_ repository
 
 ---
 
-_(v.)_ to rewind
+_(v.)_ rewind
 * _(verb.)_ kelata taaksepäin
 > To throw away part of the development, i.e. to assign the head
 > to an earlier revision.
@@ -192,7 +200,8 @@ _(n.)_ tag
 ---
 
 _(n.)_ upstream
-* _(subst.)_ ylätaso, **yläjuoksu**
+* _(subst.)_ ylätaso
+* _(subst.)_ **yläjuoksu**
 
 ---
 
