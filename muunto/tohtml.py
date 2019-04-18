@@ -10,27 +10,27 @@ def indent(html, spaces):
     Sisentää HTML-koodia tai muuta tekstiä lisäämällä jokaisen
     rivin alkuun halutun määrän välilyöntejä.
     """
-    head = " " * spaces
+    head = ' ' * spaces
     return os.linesep.join(head + line for line in html.splitlines())
 
 def allowed_in_id(char):
     """
     Kertoo, onko merkki sallittu HTML:n id:ssä.
     """
-    return char[0].upper() in "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_:."
+    return char[0].upper() in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_:.'
 
 def word_to_id(word):
     """
     Muuntaa sanan yhteensopivaksi HTML id:ksi.
     """ 
-    res = ""
+    res = ''
     for c in word:
         if allowed_in_id(c):
             res += c
-        elif c == " ":
-            res += "_"
-        elif c == ")":
-            res += ":"
+        elif c == ' ':
+            res += '_'
+        elif c == ')':
+            res += ':'
     return res
 
 def safefind(haystack, needle, start = 0):
@@ -126,7 +126,7 @@ class SanastoSana():
     sanat (listana) sekä mahdollisesti englanninkielisen kuvauksen,
     suomenkielisen kuvauksen sekä lisärivit.
     """
-    def __init__(self, eng, fin, eng_text = "", fin_text = "", extra = []):
+    def __init__(self, eng, fin, eng_text = '', fin_text = '', extra = []):
         if not eng or not fin:
             raise ValueError('eng ja fin tulee sisältää jotain')
         self.eng, self.fin, self.eng_text, self.fin_text, self.extra = \
@@ -211,6 +211,10 @@ class SanastoSanat():
         self.words = words
 
     def word_ids(self):
+        """
+        Palauttaa taulukon sanoista ja niiden varsinaisista id:eistä
+        linkkien korjaamista varten.
+        """
         result = {}
         for word in self.words:
             clean = word.clean()
@@ -408,7 +412,7 @@ class SanastoTiedosto():
         Tarkistaa, onko seuraava rivi sanojen välissä oleva erotin.
         """
         self.skip_empty_lines()
-        return (self.expect_line() or "").strip().startswith('---')
+        return (self.expect_line() or '').strip().startswith('---')
 
     def expect_sanat(self):
         """
@@ -501,9 +505,9 @@ def main():
                     </body>
                 </html>
                 """).format(nimi, 
-                           indent(alku.html() if alku else "", 8), 
+                           indent(alku.html() if alku else '', 8), 
                            indent(sanat.html(), 8), 
-                           indent(loppu.html() if loppu else "", 8)), 
+                           indent(loppu.html() if loppu else '', 8)), 
                 sanat.word_ids()))
     return 0
 
