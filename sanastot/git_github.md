@@ -45,12 +45,11 @@ _(v.)_ clone
 ---
 
 _(n.)_ commit
-* _(subst.)_ **solmittu muutos**
 * _(subst.)_ **sitoutus**
 * _(subst.)_ pysyvä muutos
-* _(subst.)_ **solmu**
-* _(subst.)_ **solminta**
 * _(subst.)_ **varastointi**
+* _(subst.)_ **solminta**
+* _(subst.)_ **solmittu muutos**
 > A single point in the Git history; the entire history of a project is
 > represented as a set of interrelated commits.
 >> Pysyvä muutos.
@@ -58,9 +57,9 @@ _(n.)_ commit
 ---
 
 _(v.)_ commit
-* _(verb.)_ **solmia**
 * _(verb.)_ **sitouttaa**
 * _(verb.)_ **varastoida**
+* _(verb.)_ **solmia**
 > The action of storing a new snapshot of the project’s state in the Git
 > history, by creating a new commit representing the current state of the
 > index and advancing HEAD to point at the new commit.
