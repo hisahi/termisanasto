@@ -22,7 +22,7 @@ def allowed_in_id(char):
 def word_to_id(word):
     """
     Muuntaa sanan yhteensopivaksi HTML id:ksi.
-    """ 
+    """
     res = ''
     for c in word:
         if allowed_in_id(c):
@@ -63,11 +63,49 @@ def convert_tt_to_links(markdown):
     """
     Muuntaa <tt>...</tt> linkeiksi sanoihin.
     """
-    return re.sub(r'<tt>([^<]+)</tt>', 
+    return re.sub(r'<tt>([^<]+)</tt>',
                   lambda m: '<a href="#sanalinkki_{}">{}</a>'.format(
-                                        word_to_id(m.group(1)), 
+                                        word_to_id(m.group(1)),
                                         m.group(1)),
                   markdown)
+
+def convert_markdown_extra(markdown):
+    """
+    Muuntaa linkkejä sekä numeroimattomia listoja.
+    """
+    # linkit
+    markdown = re.sub(r"\[([^\"\]]+)\]\(([^)]+)\)",
+                  lambda m: "<a href=\"{}\">{}</a>".format(
+                                        m.group(1),
+                                        m.group(2)),
+                  markdown)
+    res, bullet, clist = [], "", []
+
+    def end_list():
+        nonlocal res, bullet, clist
+        if bullet:
+            res.append("<ul>")
+            for l in clist:
+                res.append("    <li>{}</li>".format(l))
+            res.append("</ul>")
+        clist = []
+
+    for line in markdown.splitlines():
+        if line[:2] in ["* ", "- "]:
+            pref = line[:2]
+            if bullet != pref:
+                end_list()
+                bullet = pref
+            clist.append(line[2:])
+        elif line[:2] in ["  "]:
+            clist[-1] = clist[-1] + line[2:]
+        else:
+            end_list()
+            bullet = ""
+        if not bullet:
+            res.append(line)
+    end_list()
+    return os.linesep.join(res)
 
 def convert_markdown_to_html(markdown, word_links = False):
     """
@@ -79,23 +117,38 @@ def convert_markdown_to_html(markdown, word_links = False):
     """
     converted, pointer, state = '', 0, set()
     html_tags = {'*': '<i>', '**': '<b>', '~~': '<s>', '`': '<tt>'}
+    markdown = markdown.replace("<", "&lt;").replace(">", "&gt;")
+    markdown = convert_markdown_extra(markdown)
+    in_html = False
     while True:
         result = minfind(markdown,
-                ['**', '*', '_', '__', '~~', '`'], start = pointer)
+                ['**', '*', '_', '__', '~~', '`', '>' if in_html else '<'], start = pointer)
         if result is None:
             converted += markdown[pointer:]
             break
         meta, index = result
-        meta = meta.replace('_', '*') # unify _ => *, __ => **
-        tag = html_tags[meta]
-        if meta in state:
-            tag = tag.replace('<', '</')
-        converted += markdown[pointer:result[1]] + tag
-        state ^= {meta}
+        if meta in ['<', '>']:
+            in_html = not in_html
+            tag = meta
+        elif in_html:
+            tag = meta
+        else:
+            meta = meta.replace('_', '*') # unify _ => *, __ => **
+            tag = html_tags[meta]
+            if meta in state:
+                tag = tag.replace('<', '</')
+            state ^= {meta}
+        converted += markdown[pointer:index] + tag
         pointer = len(meta) + index
     if word_links:
         converted = convert_tt_to_links(converted)
     return converted
+
+def prepare_md_block(markdown):
+    """
+    Muuntaa Markdownin rivinvaihdot HTML-rivinvaihdoiksi.
+    """
+    return markdown.replace("\n", "<br />")
 
 class SanastoAlku():
     """
@@ -116,7 +169,7 @@ class SanastoAlku():
                 {}
                     </p>
                 </header>
-                """).format(indent(convert_markdown_to_html(self.text), 8))
+                """).format(indent(prepare_md_block(convert_markdown_to_html(self.text)), 8))
 
 class SanastoSana():
     """
@@ -143,7 +196,7 @@ class SanastoSana():
             return word_to_id(candidate.split(')', 1)[1].strip())
         else:
             return word_to_id(candidate)
-    
+
     def html_id(self):
         """
         Palauttaa tämän sanan HTML id:n.
@@ -260,7 +313,7 @@ class SanastoLoppu():
                 {}
                     </p>
                 </footer>
-                """).format(indent(convert_markdown_to_html(self.text), 8))
+                """).format(indent(prepare_md_block(convert_markdown_to_html(self.text)), 8))
 
 class SanastoTiedosto():
     """
@@ -268,7 +321,7 @@ class SanastoTiedosto():
     """
     def __init__(self, file):
         self.file = file
-    
+
     def expect_line(self):
         """
         Lukee rivin tiedostosta ja palauttaa sen, tai palauttaa arvon None
@@ -351,8 +404,8 @@ class SanastoTiedosto():
         """
         Lukee osion seuraavaan osio-otsikkoon asti.
         """
-        return self.read_lines_meeting(lambda x: x.startswith('#') 
-                                       and not x.startswith('##'),
+        return self.read_lines_meeting(lambda x: not x.startswith('#')
+                                       or x.startswith('##'),
                                        lambda x: x)
 
     def expect_nimi(self):
@@ -389,7 +442,7 @@ class SanastoTiedosto():
         """
         Lukee termin englanninkielisen selityksen.
         """
-        return self.read_lines_meeting(lambda x: x.startswith('>') 
+        return self.read_lines_meeting(lambda x: x.startswith('>')
                                                  and not x.startswith('>>'),
                                        lambda x: x[1:].strip())
 
@@ -403,7 +456,7 @@ class SanastoTiedosto():
         """
         Lukee lisärivit, kuten Katso myös -rivit.
         """
-        return self.read_lines_meeting(lambda x: x.startswith('-') 
+        return self.read_lines_meeting(lambda x: x.startswith('-')
                                                  and not x.startswith('--'),
                                        lambda x: x[1:].strip())
 
@@ -454,17 +507,17 @@ def replace_sanalinkki(text, words):
 """
 Pääfunktio.
 """
-def main():    
-    parser = argparse.ArgumentParser(description = 
+def main():
+    parser = argparse.ArgumentParser(description =
         'Muuntaa hisahi/termisanasto-formaatin HTML-muotoon.')
-    parser.add_argument('sanasto', 
+    parser.add_argument('sanasto',
         help='polku sanastoon termisanaston Markdown-yhteensopivassa muodossa')
-    parser.add_argument('tulos', 
+    parser.add_argument('tulos',
         help='tiedostopolku tuloksena oleva HTML-tiedostolle')
-    
+
     args = parser.parse_args()
     if not os.path.isfile(args.sanasto):
-        print('Sanastotiedostoa ei ole olemassa: {}'.format(args.sanasto), 
+        print('Sanastotiedostoa ei ole olemassa: {}'.format(args.sanasto),
                             file = sys.stderr)
         return 2
 
@@ -479,7 +532,7 @@ def main():
         alku = pfile.expect_alku()
         sanat = pfile.expect_sanat()
         if not sanat:
-            print('Sanastotiedoston syntaksissa on vikaa: sanat puuttuvat', 
+            print('Sanastotiedoston syntaksissa on vikaa: sanat puuttuvat',
                             file = sys.stderr)
             return 2
         loppu = pfile.expect_loppu()
@@ -505,11 +558,11 @@ def main():
                         <p><i>Päivitetty {4}</i></p>
                     </body>
                 </html>
-                """).format(nimi, 
-                           indent(alku.html() if alku else '', 8), 
-                           indent(sanat.html(), 8), 
+                """).format(nimi,
+                           indent(alku.html() if alku else '', 8),
+                           indent(sanat.html(), 8),
                            indent(loppu.html() if loppu else '', 8),
-                           datetime.datetime.utcnow().isoformat()), 
+                           datetime.datetime.utcnow().isoformat()),
                 sanat.word_ids()))
     return 0
 
