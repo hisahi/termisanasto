@@ -3,7 +3,7 @@
 Muuntaa Markdown-yhteensopivan sanakirjan HTML-muotoon.
 """
 
-import sys, argparse, os.path, textwrap, hashlib, re
+import sys, argparse, os.path, textwrap, hashlib, re, datetime
 
 def indent(html, spaces):
     """
@@ -502,12 +502,14 @@ def main():
                 {1}
                 {2}
                 {3}
+                        <p><i>Päivitetty {4}</i></p>
                     </body>
                 </html>
                 """).format(nimi, 
                            indent(alku.html() if alku else '', 8), 
                            indent(sanat.html(), 8), 
-                           indent(loppu.html() if loppu else '', 8)), 
+                           indent(loppu.html() if loppu else '', 8),
+                           datetime.datetime.utcnow().isoformat()), 
                 sanat.word_ids()))
     return 0
 
