@@ -45,6 +45,7 @@ _(v.)_ clone
 ---
 
 _(n.)_ commit
+* _(subst.)_ talletus
 * _(subst.)_ **sitoutus**
 * _(subst.)_ **varastointi**
 * _(subst.)_ vahvistus
@@ -58,6 +59,7 @@ _(n.)_ commit
 ---
 
 _(v.)_ commit
+* _(verb.)_ tallettaa
 * _(verb.)_ **sitouttaa**
 * _(verb.)_ **varastoida**
 * _(verb.)_ vahvistaa
@@ -95,13 +97,15 @@ _(n.)_ fork
 
 _(n.)_ index
 * _(subst.)_ indeksi
+* _(subst.)_ hakemisto
 > A collection of files with stat information, whose contents are stored 
 > as objects. The index is a stored version of your working tree.
 
 ---
 
 _(n.)_ issue
-* _(subst.)_ **seikka**
+* _(subst.)_ **aloite**
+* _(subst.)_ ehdotus
 > On GitHub, a system for tracking ideas, enhancements, tasks,
 > or bugs for work.
 
@@ -154,14 +158,15 @@ _(n.)_ pull request
 ---
 
 _(n.)_ rebase
-* _(verb.)_ **sulauttaa**
+* _(verb.)_ **varrentaa**
 > To reapply a series of changes from a branch to a different base,
 > and reset the head of that branch to the result.
->> Haaran sulauttaminen esimerkiksi päähaaraan vaihtaa sulautettavan
->> haaran pohjaksi taas päähaaran. Tämän toteuttaakseen kaikki
->> haaran päähaarasta eroavat muutokset kelataan takaisin ja tehdään
->> uudestaan päähaaran vastaavan tilan päälle, jonka jälkeen molemmat
->> haarojen puussa ei ole enää varsinaisesti "haaraa".
+>> Haaran varrentaminen (käsite kasvien jalostuksesta) esimerkiksi
+>> päähaaraan vaihtaa varrennettavan haaran pohjaksi taas päähaaran.
+>> Tämän toteuttaakseen kaikki haaran päähaarasta eroavat muutokset
+>> kelataan takaisin ja tehdään uudestaan päähaaran vastaavan
+>> tilan päälle, jonka jälkeen molemmat haarojen puussa ei ole
+>> enää varsinaisesti "haaraa".
 - Katso myös: `merge` 
 
 ---
